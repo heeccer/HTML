@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+     *获取100以内的菲波拉契数列,如:1 1 2 3 5 8 13 21 34
+     */
+    /* var a, b;
+    var temp;
+
+    for (let i = 0; i <= 100; i++) {
+      if (i == 0) {
+        a = 1;
+        b = 0;
+      } else {
+        temp = a + b;
+        b = a;
+        a = temp;
+      }
+      if (a <= 100) {
+        document.write(a + " ")
+      }
+    } */
+
+    var a = 0, //第一个数
+      b = 1; //第二个数
+    while (true) {
+      var temp = a + b;
+      a = b;
+      b = temp;
+      if (a <= 100) {
+        document.write(a + "--");
+      } else {
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>

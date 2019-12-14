@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+     * 1、开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适
+     */
+    var weight = Number(prompt("请输入你的体重(Kg)"));
+    var height = Number(prompt("请输入您的身高(Cm)"));
+    var normal = (height - 108) * 2;
+    if (weight > normal + 5 || weight < normal - 5) {
+      alert("你的体重不合适。");
+      console.log("你的体重不合格。" + "身高：%scm 体重：%sKg", height, weight);
+    } else {
+      alert("你的体重正常。");
+      console.log("你的体重不合格。" + "身高：%scm 体重：%sKg", height, weight);
+    }
+  </script>
+</body>
+
+</html>

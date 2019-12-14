@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*
+    * 编写一个函数，计算三个数字的大小，按从小到大顺序输出
+    * */
+
+    function fn1(x,y,z){
+        if(x>y){
+            if(y>z){
+                document.write(z+'<='+y+'<='+x)
+            }else{
+                if(x>z){
+                    document.write(y+'<='+z+'<='+x)
+                }else{
+                    document.write(y+'<='+x+'<='+z)
+                }
+            }
+        }else{
+            if(y>z){
+                if(x>z){
+                    document.write(z+'<='+x+'<='+y)
+                }else{
+                    document.write(x+'<='+z+'<='+y)
+                }
+            }else{
+                document.write(x+'<='+y+'<='+z)
+            }
+        }
+    }
+    fn1(4,5,4)
+</script>
+</body>
+</html>

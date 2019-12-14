@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    //        function fn1(){
+    ////            console.log(a+b+c)
+    //            console.log(arguments)
+    //        }
+    //        fn1(1,2,3,4)
+
+    //        function fn1(){
+    ////            console.log(arguments.length)
+    ////            console.log(arguments)
+    ////            console.log(arguments[0])
+    //            //使用循环遍历arguments对象中的元素
+    //            for(var i=0;i<arguments.length;i++){
+    //                console.log(arguments[i])
+    //            }
+    //        }
+    //        fn1(2,3,4,5,6)
+
+    //使用函数，获取最大值
+    //        function fn1(){
+    //            var max=arguments[0] //最大值
+    //            for(var i=1;i<arguments.length;i++){
+    //                if(max<arguments[i]){
+    //                    max=arguments[i]
+    //                }
+    //            }
+    //            console.log(max)
+    //        }
+    //        fn1(5,8,6,3,2,7)
+
+    function fn1() {
+      var min = arguments[0] //最小值
+      for (var i = 1; i < arguments.length; i++) {
+        if (min > arguments[i]) {
+          min = arguments[i]
+        }
+      }
+      console.log(min)
+    }
+    //fn1(5,8,6,3,2,7)
+    fn1('add', 'apple', 'pink', 'hello', 'red', 'aaa')
+  </script>
+</body>
+
+</html>

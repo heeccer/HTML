@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 编写一个函数，计算三个数字的大小，按从小到大顺序输出 */
+    function name() {
+      var array1 = new Array();
+      // var min = arguments[0]; //假设第一个值最小
+
+      for (var i = 0; i < arguments.length - 1; i++) {
+        var min = arguments[i]; //假设第一个值最小
+        for (var j = i + 1; j <= arguments.length; j++) {
+          // arguments[i] = arguments[j]
+          if (arguments[j] < arguments[i]) {
+            min = arguments[j];
+            arguments[j] = arguments[i]
+          }
+
+        }
+        console.log(min);
+        // array1.push(min)
+
+      }
+
+    }
+
+    document.write(name(34, 23, 199, 40, 400));
+  </script>
+</body>
+
+</html>

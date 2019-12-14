@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+//        for(var a= 1,b= 1,c=1;b<=5;a+=2,b++,c+=3){
+//            console.log(a,b,c)
+//        }
+
+//        for(var i=1;i<=5;i++){
+//            if(i==3){
+//                break
+//            }
+//            document.write('外层'+i+"<br/>")
+//            for(var a=1;a<=5;a++){
+//                document.write('、、内层'+a+'<br/>')
+////                if(a==3){
+////                    break
+////                }
+//            }
+
+        //获取100-200的质数
+//        for(var i=100;i<=200;i++){
+//            var a=true
+//            for(var j=2;j<i;j++){
+//                if(i%j==0){
+//                    a=false
+//                    break
+//                }
+//            }
+//            if(a){
+//                document.write(i+' ')
+//            }
+//        }
+
+//        for(var i=1;i<=5;i++){
+//            if(i==3){
+//                continue
+//            }
+//            document.write(i+' ')
+//
+//        }
+        //100-1000以内的水仙花数：计算公式：个位数的立方+十位数的立方+百位数的立方=自己
+        //方法一
+        //百位
+//        for(var i=1;i<=9;i++){
+//            //十位
+//            for(var j=0;j<=9;j++){
+//                //个位
+//                for(var z=0;z<=9;z++){
+//                    if(i**3+j**3+z**3==i*100+j*10+z){
+//                        document.write(i,j,z," ")
+//                    }
+//                }
+//            }
+//        }
+
+        for(var a=100;a<=999;a++){
+            //百位
+            var x=parseInt(a/100)
+            //十位
+            var y=parseInt(a/10)%10
+            //个位
+            var z=a%10
+            if(x**3+y**3+z**3==a){
+                document.write(x,y,z,' ')
+            }
+        }
+
+    </script>
+</body>
+</html>

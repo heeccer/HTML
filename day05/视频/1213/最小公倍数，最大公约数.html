@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    //编写函数，求任意两个数字的最大公约数和最小公倍数
+    /*
+     *    6   9
+     * */
+
+    //最大公约数
+    function fn1(n, m) {
+      var num = 0
+      for (var i = 1, j = 1; i <= n && j <= m; i++, j++) {
+        if (n % i == 0 && m % j == 0) {
+          num = i
+        }
+      }
+      return num
+    }
+    var x = fn1(15, 30)
+    console.log(x)
+
+    //最小公倍数
+    function fn2(a, b) {
+      return (a * b) / fn1(a, b)
+    }
+    var y = fn2(30, 45)
+    console.log(y)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var cars = "hello";
+    for (let i = 0; i < 5; i++) {
+      // const element = array[i];
+      document.write(cars[i] + "<br>");
+
+    }
+    var txt = "";
+    var person = {
+      fname: "John",
+      lname: "Doe",
+      age: 25
+    };
+    for (x in person) {
+      txt = txt + person[x];
+    }
+    console.log(txt);
+    var i, x;
+    while (i < 5) {
+      x = x + "The number is " + i + "<br>";
+      document.write(x);
+      i++;
+    }
+  </script>
+</body>
+
+</html>

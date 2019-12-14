@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 2、大马驮2石粮食，中马驮1石粮食，两头小马驮一石粮食，要用100匹马，驮100石粮食，该如何调配？ */
+
+    var large = 0, //大马
+      // middle = 0,   //中马
+      // small = 0,  //小马
+      all = 100, //总量
+      sum = 100; //总数
+    //判断马数
+    while (large <= all) {
+      var middle = 0; //中马
+      while (middle <= all) {
+        var small = 0; //小马
+        while (small <= all) {
+          if (2 * large + 1 * middle + 0.5 * small == sum && large + middle + small == 100) {
+            document.write(large + " " + middle + " " + small + "<br/>")
+          }
+          small++;
+        }
+        middle++;
+      }
+      large++;
+    }
+  </script>
+</body>
+
+</html>

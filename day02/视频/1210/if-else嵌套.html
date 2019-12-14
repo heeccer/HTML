@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var a=20,b=10
+        if(a>=18){
+//            console.log('可以上班了')
+            if(b<10){
+                console.log('孩子还小')
+            }else{
+                console.log('孩子大了')
+            }
+        }else{
+            if(b<7){
+                console.log('幼儿园')
+            }else{
+                console.log('小学')
+            }
+//            console.log('还小，回去读书')
+        }
+
+//        a>=18 ? console.log('可以上班了'):console.log('还小，回去读书')
+        //var str=a>=18 ? '可以上班了':'还小，回去读书'
+        var str=a>=18? (b<10?'孩子还小':'孩子大了' ):(b<7?'幼儿园':'小学')
+        console.log(str)
+    </script>
+</body>
+</html>

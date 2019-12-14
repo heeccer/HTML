@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 3、编写一个函数求两个数字之间有多少个质数
+        例如：fn(100, 200) ，在控制台输出 100 - 200 之间的所有质数 */
+    /* 
+     *质数函数
+     */
+    function prime(a, b) {
+      for (let i = a; i <= b; i++) {
+        var c = 0 //能被尽的次数
+        for (let j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            c++;
+          }
+        }
+        if (c == 2) {
+          document.write(i + "--")
+        }
+      }
+    }
+
+
+    var num1 = parseInt(prompt());
+    var num2 = parseInt(prompt());
+    document.write(prime(num1, num2));
+  </script>
+</body>
+
+</html>

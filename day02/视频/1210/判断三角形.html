@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+//        var a=85
+//        if(a>=0 && a<=100){
+//            if(a>=90){
+//                console.log('A')
+//            }else if(a>=70){
+//                console.log('B')
+//            }else if(a>=60){
+//                console.log('C')
+//            }else{
+//                console.log('D')
+//            }
+//        }else{
+//            console.log('分数有误')
+//        }
+
+        /*
+        * 1、判断输入的三条边的长度，是否能组成一个三角形
+        *
+        * */
+        var a=parseInt(prompt('请输入第一条边长：'))
+        var b=parseInt(prompt('请输入第二条边长：'))
+        var c=parseInt(prompt('请输入第三条边长：'))
+        //判断是否为三角形
+        if(a+b>c && a+c>b && c+b>a){
+            //判断是否为等腰三角形
+            if(a==b && b==c && a==c){
+                console.log('等边三角形')
+            }else if(a==b || a==c || b==c){
+                console.log('等腰三角形')
+            }else if(a*a+b*b==c*c || a*a+c*c==b*b || b*b+c*c==a*a){
+                console.log('直角三角形')
+            }else{
+                console.log('是三角形')
+            }
+        }else{
+            console.log('不能组成三角形')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        /*
+        * do{语句块}while(条件)：先执行一次语句块，然后再来判断。如果条件成立，则继续执行，如果条件不成立，则跳出循环
+        * */
+//        var i=1
+//        do{
+//            document.write(i+' ')
+//            i++
+//        }while(i>=5)
+
+        //求1-100以内的偶数和
+//        var sum=0
+//        var i=1
+//        do{
+//            if(i%2==0){
+//                sum+=i
+//            }
+//            i++
+//        }while(i<=100)
+//        document.write(sum)
+
+//        var a=1
+//        var i=10
+//        do{
+//            a=(a+1)*2
+//            i--
+//        }while(i>1)
+//        document.write(a)
+
+        //给一个1-10随机数字，求该数字的阶乘
+//        var m=parseInt(Math.random()*10)+1
+//        //var m=Math.ceil(Math.random()*10)
+//        var a=1
+//
+//        var i=1
+//        do{
+//            a*=i
+//            i++
+//        }while(i<=m)
+//        document.write(m+' '+a)
+
+        //99乘法表
+        //外层循环代表行数
+        var i=1
+        do{
+            //内层循环代表列数
+            var j=1
+            do{
+                document.write(i+'x'+j+'='+i*j+' ')
+                j++
+            }while(j<=i)
+            document.write('<br/>')
+            i++
+        }while(i<=9)
+    </script>
+</body>
+</html>

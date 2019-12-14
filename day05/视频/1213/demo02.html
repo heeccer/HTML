@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+<script>
+    /*
+     * 1、编写一个函数，计算两个数字的和、差、积、商
+     要求：使用传参的形式
+
+     2、使用函数求16进制的随机颜色，至少10个
+
+     3、编写一个函数求两个数字之间有多少个质数
+     例如：fn(100, 200) ，在控制台输出 100 - 200 之间的所有质数
+
+     4、通过函数传参创建表格,参数是行和列
+
+     5、（扩展）某个公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的，加密规则如下：每位数字都加上5,然后用除以10的余数代替该数字，再将第一位和第四位交换，第二位和第三位交换，请编写一个函数，传入原文，输出密文
+     *
+     * */
+    //1、编写一个函数，计算两个数字的和、差、积、商
+    //要求：使用传参的形式
+//    function fn1(n,m,spt){
+//        if(spt=='+'){
+//            var num=n+m
+//        }else if(spt=='-'){
+//            var num=n-m
+//        }else if(spt=="*"){
+//            var num=n*m
+//        }else if(spt=='/'){
+//            if(m!=0){
+//                var num=n/m
+//            }else{
+//                var num='除数不能为0'
+//            }
+//        }else{
+//            var num='输入符号有误'
+//        }
+//
+//        return num
+//    }
+//
+//    var qq=fn1(5,10,'-')
+//    console.log(qq)
+//    var qq2=fn1(10,20,'*')
+//    console.log(qq2)
+
+    //2、使用函数求16进制的随机颜色，至少10个
+
+    //获取16进制的随机颜色
+//    function fn1(){
+//        //颜色的色值
+//        var str='#'
+//        for(var i=0;i<6;i++){
+//            var a=parseInt(Math.random()*16)
+//            //把10进制的数字转换为16进制
+//            a= a.toString(16)
+//            str=str+a
+//        }
+//        console.log(str)
+////        div1.style.backgroundColor=str
+//    }
+//    for(var a=1;a<=10;a++){
+//        fn1()
+//    }
+//    function fn1(){
+//        var str='#' //颜色色值
+//        //循环只是表示生成6个16进制的字符
+//        for(var i=1;i<=6;i++){
+//           var a=parseInt( Math.random()*16)  //获取的是0-15之间的随机数
+//            //把随机生成的10进制a转换为16进制
+////            str+=a.toString(16)
+//            str=str + a.toString(16)
+//        }
+//        console.log(str)
+//    }
+//    fn1()
+
+    //编写一个函数求两个数字之间有多少个质数
+    //例如：fn(100, 200) ，在控制台输出 100 - 200 之间的所有质数
+
+    function fn1(n,m){
+        //外层循环表示被除数，也是要判断的是否为质数
+        for(var a=n;a<=m;a++){
+            //内层循环代表除数，也是判别是否为质数的条件
+            var x=0 //统计整除的次数
+            for(var b=1;b<=a;b++){
+                if(a%b==0){
+                    x++
+                }
+            }
+            if(x==2){
+                console.log(a+' ')
+            }
+        }
+    }
+    fn1(200,300)
+</script>
+</body>
+</html>

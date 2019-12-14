@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 2、利用递归求10的阶乘
+      - 10 * 9 * 8 * 7 * … * 1 = ? */
+
+    function multible(n) {
+      if (n == 10) {
+        return 1; //边界返回值
+      } else {
+        return multible(n + 1) * n; //
+      }
+    }
+    document.write(multible(1));
+  </script>
+</body>
+
+</html>

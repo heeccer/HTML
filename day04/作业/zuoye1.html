@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 1、编写一个函数，计算两个数字的和、差、积、商
+        要求：使用传参的形式 */
+    /* *
+    求和函数
+     */
+    function add() {
+      var sum = arguments[0];
+      for (let i = 1; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+      return sum;
+    }
+    /* 求差函数 */
+    function del() {
+      var sum = arguments[0];
+      for (let i = 1; i < arguments.length; i++) {
+        sum -= arguments[i];
+      }
+      return sum;
+    }
+    /* 乘法函数 */
+    function product() {
+      var pro = 1;
+      for (let i = 0; i < arguments.length; i++) {
+        pro *= arguments[i];
+      }
+      return pro;
+    }
+    /* 除法函数 */
+    function division() {
+      var que = arguments[0];
+      for (let i = 1; i < arguments.length; i++) {
+        que /= arguments[i];
+      }
+      return que;
+    }
+
+
+
+
+    var num1 = parseInt(prompt("数字1"));
+    var num2 = parseInt(prompt("数字2"));
+    if ((!isNaN(num1)) && (!isNaN(num2))) {
+      document.write("加" + add(num1, num2) + "减" + del(num1, num2) + "乘" +
+        product(num1, num2) + "除" +
+        division(num1, num2))
+
+    } else {
+      document.write('输入有误！')
+    }
+  </script>
+</body>
+
+</html>

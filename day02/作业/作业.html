@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    /*
+     * 1、开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适
+     */
+    var weight = Number(prompt("请输入你的体重(Kg)"));
+    var height = Number(prompt("请输入您的身高(Cm)"));
+    var normal = (height - 108) * 2;
+    if (weight > normal + 5 || weight < normal - 5) {
+      alert("你的体重不合适。");
+      console.log("你的体重不合格。" + "身高：%scm 体重：%sKg", height, weight);
+    } else {
+      alert("你的体重正常。");
+      console.log("你的体重不合格。" + "身高：%scm 体重：%sKg", height, weight);
+    }
+
+
+
+
+
+
+
+    /* 2、输入一员工工资，要求计算税后工资。计算规则如下(
+     （1）若3000元以下不交税；若3000-5999元交税基数为工资的1%，
+     （2）若6000-9999元高于6000的那部分交税基数为工资的2%，
+     （3）若10000元以上3000-6000元交1%；6000-10000交2%；剩余部分交3%。
+     请利用prompt输入员工工资，利用document.write输出税后工资。*/
+    var money = Number(prompt("你的工资"));
+    var salary;
+    if (money > 3000) {
+      if (money < 6000) {
+        salary = money * 0.99;
+      } else if (money >= 6000 && money < 9999) {
+        salary = money - money * 0.02;
+      } else {
+        salary = money - (3000 * 0.01 + 4000 * 0.02 + (money - 10000) * 0.03);
+      }
+    } else {
+      salary = money;
+    }
+    console.log("你的税后工资：%d元", salary);
+
+
+
+    /*3、一个小孩买了价值少于1美元的糖，并将1美元的钱交给售货员。售货员希望用数目最少的硬币找给小孩。假设提供了数目不限的面值为2 5美分、1 0美分、5美分、及1美分的硬币，写一个算法让售货员用最少的硬币数找给小孩
+
+    4、小明身高175，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：
+     低于18.5：过轻
+     18.5-25：正常
+     25-28：过重
+     28-32：肥胖
+     高于32：严重肥胖
+
+     * */
+  </script>
+</body>
+
+</html>

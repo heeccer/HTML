@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 3、一个小孩买了价值少于1美元的糖，并将1美元的钱交给售货员。售货员希望用数目最少的硬币找给小孩。假设提供了数目不限的面值为2 5美分、1 0美分、5美分、及1美分的硬币，写一个算法让售货员用最少的硬币数找给小孩 
+    var buy = Number(prompt("请输入你购买东西的价格"));
+    var pay = 100,
+      del = pay - buy;
+    var num;
+    if (buy < 100) {
+
+      if (del >= 25) {
+        num = parseInt(del / 25) + parseInt(del % 25 / 10) + parseInt(del % 25 % 10 / 5) + parseInt(del % 25 % 10 % 5);
+      } else if (del < 25 && del >= 10) {
+        num = parseInt(del / 10) + parseInt(del % 10 / 5) + parseInt(del % 10 % 5);
+      } else if (del < 10 && del >= 5) {
+        num = parseInt(del / 5) + parseInt(del % 5);
+      } else {
+        num = parseInt(del);
+      }
+      console.log("至少%d", num);
+    } else {
+      console.log("请重新输入")
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function digui(a) { //初始值
+      if (a == 10) { //临界条件
+        return 10 //临界值
+      } else {
+        return digui(a + 1) + a; //自增，执行条件
+      }
+    }
+    console.log(digui(6));
+  </script>
+</body>
+
+</html>

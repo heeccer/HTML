@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    var a=10
+//    function fn1(){
+//        var a=30
+//        var b=20
+//        function fn2(){
+//            console.log(a)
+//        }
+//        fn2()
+//    }
+//    fn1()
+    var a
+    a=10
+    function fn1(){
+        a=20
+        var a
+        function fn2(){
+           a=30
+            console.log(a)  //输出2
+        }
+        console.log(a)  //输出1
+        fn2()
+    }
+    fn1()
+    console.log(a) //输出3
+</script>
+</body>
+</html>

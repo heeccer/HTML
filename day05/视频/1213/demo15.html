@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+        function fn1(n){
+            if(n<=1){
+                return 16
+            }else{
+                return fn1(n-1)-fn1(n-2)
+            }
+        }
+        var a=fn1(4)
+        console.log(a)
+        /*fn1(4)    fn1(3)-fn1(2)
+          fn1(3)    fn1(2)-fn1(1)
+
+        *
+        * */
+</script>
+</body>
+</html>

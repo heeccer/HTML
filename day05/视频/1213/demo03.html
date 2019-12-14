@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        /*
+        * 通过函数传参创建表格,参数是行和列
+        * */
+        function fn1(tr1,td1){
+            var str1='<table border="1">'
+            //外层循环代表行数
+            for(var i=1;i<=tr1;i++){
+                str1+='<tr>'
+                //内层循环代表列数
+                for(var j=1;j<=td1;j++){
+                    str1+='<td>'+(i+j)+'</td>'
+                }
+                str1+='</tr>'
+            }
+            str1+="</table>"
+            document.write(str1)
+//            console.log(str1)
+        }
+        fn1(5,5)
+
+        /*
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                。。。
+            </tr>
+             <tr>
+                 <td></td>
+                 <td></td>
+                。。。
+             </tr>
+             。。。
+         </table>
+        * */
+    </script>
+</body>
+</html>
